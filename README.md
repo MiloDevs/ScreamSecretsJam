@@ -1,1 +1,1 @@
-"# ScreamSecretsJam" 
+# Scream Secrets GameJam
