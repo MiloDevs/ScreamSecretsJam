@@ -1,1 +1,1 @@
-# Scream Secrets GameJam
+# Scream Secrets GameJam 👻
