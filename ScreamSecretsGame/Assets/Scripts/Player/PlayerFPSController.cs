@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using SaveLoadSystem;
 using UnityEngine;
 
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerFPSController : MonoBehaviour
+public class PlayerFPSController : MonoBehaviour, IDataPersistence
 {
+    public static PlayerFPSController playerinstance;
     [Header("References")]
     [SerializeField] private Transform cameraPivot;
     [Header("Camera")]
@@ -51,6 +53,11 @@ public class PlayerFPSController : MonoBehaviour
     {
         _controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
+        if (playerinstance != null)
+        {
+            Destroy(gameObject);
+        }
+        playerinstance = this;
     }
 
     // Update is called once per frame
@@ -167,10 +174,22 @@ public class PlayerFPSController : MonoBehaviour
     public void DisablePlayerMovement()
     {
         _canMove = false;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void EnablePlayerMovement()
     {
         _canMove = true;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.playerPosition = this.transform.position;
     }
 }
