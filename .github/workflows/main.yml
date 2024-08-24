@@ -6,9 +6,9 @@ on:
         testsystems
 
 jobs:
-  build:
+  test:
     permissions: write-all
-    name: Build my project ✨
+    name: test project
     runs-on: ubuntu-latest
     environment: build
     steps:
@@ -36,6 +36,13 @@ jobs:
           projectPath: ./ScreamSecretsGame
 
       # Build
+
+  build:
+     name: build game
+     runs-on: ubuntu-latest
+     permissions: write-all
+     environment: build
+     steps:
       - name: Build project
         uses: game-ci/unity-builder@v4
         env:
