@@ -43,6 +43,7 @@ jobs:
      permissions: write-all
      environment: build
      steps:
+     
       - name: Build project
         uses: game-ci/unity-builder@v4
         env:
@@ -50,7 +51,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: WebGL
+          targetPlatform: "auto"
           allowDirtyBuild: true
           projectPath: ./ScreamSecretsGame
 
