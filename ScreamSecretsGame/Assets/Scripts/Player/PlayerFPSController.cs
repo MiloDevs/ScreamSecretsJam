@@ -7,6 +7,9 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerFPSController : MonoBehaviour, IDataPersistence
 {
+    public GameObject photoCamera; // PhotoCamera GameObject
+    bool activeCamera = false; 
+
     public static PlayerFPSController playerinstance;
     [Header("References")]
     [SerializeField] private Transform cameraPivot;
@@ -67,6 +70,13 @@ public class PlayerFPSController : MonoBehaviour, IDataPersistence
         MovePlayer();
         ApplyGravity();
         HandleCrouch();
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            activeCamera = !activeCamera;
+            photoCamera.SetActive(activeCamera);
+        }
+
     }
 
     void GetInputs()
