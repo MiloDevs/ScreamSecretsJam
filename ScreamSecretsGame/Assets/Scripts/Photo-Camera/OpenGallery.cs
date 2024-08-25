@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenGallery : MonoBehaviour
 {
     public GameObject PanelPhoto;
-    bool galleryOpened = false;
+    public bool galleryOpened = false;
     public RectTransform ContentForms;
     public CursorLook cursor;
 
