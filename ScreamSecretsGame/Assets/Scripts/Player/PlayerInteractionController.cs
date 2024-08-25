@@ -22,6 +22,7 @@ public class PlayerInteractionController : MonoBehaviour
     private InspectableObject currentInspectedObject;
     private float currentInspectionDistance;
     private PlayerFPSController fpsController;
+    
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerInteractionController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         currentInspectionDistance = inspectionPosition.z;
         fpsController = GetComponent<PlayerFPSController>();
+        
     }
 
     private void Update()
@@ -56,9 +58,11 @@ public class PlayerInteractionController : MonoBehaviour
             IInteractible interactible = hit.collider.GetComponent<IInteractible>();
             if (interactible != null)
             {
+
                 float distance = Vector3.Distance(transform.position, hit.point);
                 if (distance < closestDistance)
                 {
+                    
                     closestInteractable = interactible;
                     closestDistance = distance;
                 }

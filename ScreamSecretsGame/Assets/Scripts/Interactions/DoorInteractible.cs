@@ -11,6 +11,15 @@ public class DoorInteractable : InteractibleObject
 
     public override void Interact()
     {
+        if (isOpen)
+        {
+            AudioManager.FindObjectOfType<AudioManager>().Play("Door_Close");
+        }
+        else
+        { 
+            AudioManager.FindObjectOfType<AudioManager>().Play("Door_Open");
+        }
+
         if (!isRotating)
         {
             isOpen = !isOpen;

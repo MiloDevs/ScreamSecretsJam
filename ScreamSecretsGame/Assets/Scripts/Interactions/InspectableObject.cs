@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Interactions;
+using System;
 
 public class InspectableObject : MonoBehaviour, IInteractible
 {
@@ -8,6 +9,10 @@ public class InspectableObject : MonoBehaviour, IInteractible
     private Transform originalParent;
     private bool isBeingInspected = false;
     private Transform cameraTransform;
+
+   
+    
+
 
     private void Start()
     {
@@ -18,6 +23,7 @@ public class InspectableObject : MonoBehaviour, IInteractible
 
     public void Interact()
     {
+        GameObject.FindObjectOfType<Dialogue>().StartDialogueOnInteraction("Book");
         // This method is called by the PlayerInteractionController
         // The actual inspection start/stop is handled by the controller
     }
