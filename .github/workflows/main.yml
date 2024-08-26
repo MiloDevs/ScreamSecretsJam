@@ -97,6 +97,10 @@ jobs:
         with:
           name: itch-build
           path: itch-build
+      - name: Zip build
+        run: |
+          cd itch-build
+          zip -r ../game.zip .
       - name: Publish to itch.io
         uses: manleydev/butler-publish-itchio-action@master
         env:
@@ -104,4 +108,4 @@ jobs:
           CHANNEL: webgl
           ITCH_GAME: scream-secrets-game
           ITCH_USER: milodevs
-          PACKAGE: itch-build
+          PACKAGE: game.zip
