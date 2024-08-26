@@ -1,8 +1,6 @@
 name: Build and Publish Game 🚀
+
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - test-systems
