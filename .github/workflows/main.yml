@@ -3,7 +3,7 @@ name: Build and Publish Game 🚀
 on:
   push:
     branches:
-      - test-systems
+      - testsystems
 jobs:
   test:
     name: Test Project
