@@ -5,11 +5,42 @@ on:
       - main
   push:
     branches:
-      - main
+      - testsystems
 jobs:
   test:
-    # [Test job remains unchanged]
-
+    name: Test Project
+    runs-on: ubuntu-latest
+    permissions: write-all
+    environment: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Free Disk Space
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+      - name: Cache Library
+        uses: actions/cache@v3
+        with:
+          path: ScreamSecretsGame/Library
+          key: Library-${{ hashFiles('ScreamSecretsGame/Assets/**', 'ScreamSecretsGame/Packages/**', 'ScreamSecretsGame/ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectPath: ./ScreamSecretsGame
   build:
     name: Build Project
     needs: test
@@ -55,7 +86,6 @@ jobs:
         with:
           name: itch-build
           path: itch-build
-
   publish:
     name: Publish to itch.io
     needs: build
@@ -72,5 +102,5 @@ jobs:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: webgl
           ITCH_GAME: scream-secrets-game
-          ITCH_USER: youritchusername
+          ITCH_USER: milodevs
           PACKAGE: itch-build
