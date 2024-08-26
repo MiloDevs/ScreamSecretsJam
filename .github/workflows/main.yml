@@ -79,8 +79,9 @@ jobs:
           projectPath: ./ScreamSecretsGame
       - name: Prepare build for itch.io
         run: |
-          mkdir itch-build
-          mv build/WebGL/WebGL/* itch-build/
+          sudo mkdir -p itch-build
+          sudo mv build/WebGL/WebGL/* itch-build/
+          sudo chown -R $USER:$USER itch-build
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
