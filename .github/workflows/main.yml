@@ -1,21 +1,20 @@
-name: Build Game 🚀
-
+name: Build and Publish Game 🚀
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
-      - testsystems
-
+      - main
 jobs:
   test:
     name: Test Project
     runs-on: ubuntu-latest
     permissions: write-all
     environment: build
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Free Disk Space
         uses: jlumbroso/free-disk-space@main
         with:
@@ -26,7 +25,6 @@ jobs:
           large-packages: true
           docker-images: true
           swap-storage: true
-
       - name: Cache Library
         uses: actions/cache@v3
         with:
@@ -34,7 +32,6 @@ jobs:
           key: Library-${{ hashFiles('ScreamSecretsGame/Assets/**', 'ScreamSecretsGame/Packages/**', 'ScreamSecretsGame/ProjectSettings/**') }}
           restore-keys: |
             Library-
-
       - name: Run tests
         uses: game-ci/unity-test-runner@v4
         env:
@@ -51,11 +48,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     environment: build
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Free Disk Space
         uses: jlumbroso/free-disk-space@main
         with:
@@ -66,7 +61,6 @@ jobs:
           large-packages: true
           docker-images: true
           swap-storage: true
-
       - name: Cache Library
         uses: actions/cache@v3
         with:
@@ -74,7 +68,6 @@ jobs:
           key: Library-${{ hashFiles('ScreamSecretsGame/Assets/**', 'ScreamSecretsGame/Packages/**', 'ScreamSecretsGame/ProjectSettings/**') }}
           restore-keys: |
             Library-
-
       - name: Build project
         uses: game-ci/unity-builder@v4
         env:
@@ -85,9 +78,27 @@ jobs:
           targetPlatform: WebGL
           allowDirtyBuild: true
           projectPath: ./ScreamSecretsGame
-
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Build
           path: build
+
+  publish:
+    name: Publish to itch.io
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: Build
+          path: build
+      - name: Publish to itch.io
+        uses: manleydev/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          CHANNEL: webgl
+          ITCH_GAME: scream-secrets-game
+          ITCH_USER: milodevs
+          PACKAGE: build
