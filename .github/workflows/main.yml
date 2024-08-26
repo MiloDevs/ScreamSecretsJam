@@ -5,7 +5,7 @@ on:
       - main
   push:
     branches:
-      - main
+      - test-systems
 jobs:
   test:
     name: Test Project
