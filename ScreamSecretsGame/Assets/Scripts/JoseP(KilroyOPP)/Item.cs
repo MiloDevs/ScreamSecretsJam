@@ -6,7 +6,6 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class Item : ScriptableObject
 {
-    [SerializeField] string ItemName;
-    [SerializeField] string description;
-    [SerializeField] Image icon;
+    [SerializeField] public string ItemName;
+    [SerializeField] public Sprite sprite;
 }

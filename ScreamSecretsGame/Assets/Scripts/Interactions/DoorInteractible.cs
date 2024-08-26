@@ -5,10 +5,10 @@ public class DoorInteractable : InteractibleObject
 {
     [SerializeField] private float rotationSpeed = 90f; // Degrees per second
     [SerializeField] private float maxRotationAngle = 90f;
-
+    [SerializeField] private Item typeOfKey;
     private bool isOpen = false;
     private bool isRotating = false;
-
+    private bool isUnlocked = false;
     public override void Interact()
     {
         if (isOpen)
@@ -20,10 +20,15 @@ public class DoorInteractable : InteractibleObject
             AudioManager.FindObjectOfType<AudioManager>().Play("Door_Open");
         }
 
-        if (!isRotating)
+        if (GameObject.FindObjectOfType<InventorySystem>().playerHasThisItem(typeOfKey) || isUnlocked)
         {
-            isOpen = !isOpen;
-            StartCoroutine(RotateDoor());
+            GameObject.FindObjectOfType<InventorySystem>().RemoveItem(typeOfKey);
+            isUnlocked = true;
+            if (!isRotating)
+            {
+                isOpen = !isOpen;
+                StartCoroutine(RotateDoor());
+            }
         }
     }
 
