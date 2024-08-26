@@ -95,7 +95,7 @@ jobs:
       - name: Publish to itch.io
         uses: manleydev/butler-publish-itchio-action@master
         env:
-          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: webgl
           ITCH_GAME: scream-secrets-game
           ITCH_USER: milodevs
