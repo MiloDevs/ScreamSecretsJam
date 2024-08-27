@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Build Game 🚀
 
 on:
@@ -35,6 +36,34 @@ jobs:
           restore-keys: |
             Library-
 
+=======
+name: Actions 😎
+
+on: 
+  push:
+      branches:
+        testsystems
+
+jobs:
+  build:
+    name: Build my project ✨
+    runs-on: ubuntu-latest
+    environment: build
+    steps:
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Cache
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # Test
+>>>>>>> 8fa6a8845c996cb3afcefd2006033424a53719b8
       - name: Run tests
         uses: game-ci/unity-test-runner@v4
         env:
@@ -45,6 +74,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           projectPath: ./ScreamSecretsGame
 
+<<<<<<< HEAD
   build:
     name: Build Project
     needs: test
@@ -75,6 +105,9 @@ jobs:
           restore-keys: |
             Library-
 
+=======
+      # Build
+>>>>>>> 8fa6a8845c996cb3afcefd2006033424a53719b8
       - name: Build project
         uses: game-ci/unity-builder@v4
         env:
@@ -83,11 +116,18 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: WebGL
+<<<<<<< HEAD
           allowDirtyBuild: true
           projectPath: ./ScreamSecretsGame
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
+=======
+          projectPath: ./ScreamSecretsGame
+
+      # Output
+      - uses: actions/upload-artifact@v3
+>>>>>>> 8fa6a8845c996cb3afcefd2006033424a53719b8
         with:
           name: Build
           path: build

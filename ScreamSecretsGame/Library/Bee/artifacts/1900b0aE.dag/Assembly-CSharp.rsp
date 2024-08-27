@@ -359,6 +359,7 @@
 "Assets/Scripts/Interactions/InspectableObject.cs"
 "Assets/Scripts/Interactions/Interactible.cs"
 "Assets/Scripts/Interactions/InteractibleObject.cs"
+<<<<<<< HEAD
 "Assets/Scripts/JoseP(KilroyOPP)/AudioManager.cs"
 "Assets/Scripts/JoseP(KilroyOPP)/Dialogue.cs"
 "Assets/Scripts/JoseP(KilroyOPP)/DialogueContent.cs"
@@ -366,6 +367,13 @@
 "Assets/Scripts/JoseP(KilroyOPP)/Item.cs"
 "Assets/Scripts/JoseP(KilroyOPP)/ItemManager.cs"
 "Assets/Scripts/JoseP(KilroyOPP)/Sound.cs"
+=======
+"Assets/Scripts/Photo-Camera/CursorLook.cs"
+"Assets/Scripts/Photo-Camera/OpenGallery.cs"
+"Assets/Scripts/Photo-Camera/PhotoCameraControl.cs"
+"Assets/Scripts/Photo-Camera/PhotoSlider.cs"
+"Assets/Scripts/Photo-Camera/ScreenPhoto.cs"
+>>>>>>> 8fa6a8845c996cb3afcefd2006033424a53719b8
 "Assets/Scripts/Player/Headbob.cs"
 "Assets/Scripts/Player/PlayerFPSController.cs"
 "Assets/Scripts/Player/PlayerInteractionController.cs"
