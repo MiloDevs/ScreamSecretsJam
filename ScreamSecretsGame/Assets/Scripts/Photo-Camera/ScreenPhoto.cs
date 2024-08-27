@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class ScreenPhoto : MonoBehaviour
 {
-    public Camera photoCamera; // Убедитесь, что это ваша нужная камера
-    public RawImage rw; // RawImage, куда будет выводиться текстура
-    public RenderTexture renderTexture; // RenderTexture для захвата изображения
+    public Camera photoCamera; 
+    public RawImage rw; 
+    public RenderTexture renderTexture; 
     private Texture2D photoTexture;
     private GameObject Photo;
 
@@ -16,28 +16,28 @@ public class ScreenPhoto : MonoBehaviour
         photoCamera = GameObject.FindGameObjectWithTag("PhotoCamera").GetComponent<Camera>();
         // Устанавливаем RenderTexture на камеру
         photoCamera.targetTexture = renderTexture;
-        StartCoroutine(ScreenS()); // Запускаем корутину с методом скриншота
-        Photo = rw.gameObject; // Указываем, что Photo это RawImage
+        StartCoroutine(ScreenS()); 
+        Photo = rw.gameObject; 
     }
 
     public void DeletePhoto()
     {
-        Destroy(Photo); // Удаляем фото
+        Destroy(Photo); 
     }
 
     IEnumerator ScreenS()
     {
-        // Ждем завершения всех отрисовок
+        
         yield return new WaitForEndOfFrame();
 
-        // Создаем временную текстуру, чтобы захватить RenderTexture
+        
         RenderTexture.active = renderTexture;
         Texture2D screen = new Texture2D(renderTexture.width, renderTexture.height);
         screen.ReadPixels(new Rect(0, 0, renderTexture.width, renderTexture.height), 0, 0);
         screen.Apply();
         RenderTexture.active = null;
 
-        // Устанавливаем текстуру в RawImage
+        
         rw.texture = screen;
     }
 }
