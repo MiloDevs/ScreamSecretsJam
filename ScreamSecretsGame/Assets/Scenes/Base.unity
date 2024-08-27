@@ -2557,6 +2557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182411100}
   - component: {fileID: 1182411102}
+  - component: {fileID: 1182411107}
   - component: {fileID: 1182411101}
   - component: {fileID: 1182411103}
   - component: {fileID: 1182411104}
@@ -2736,6 +2737,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fpsController: {fileID: 1182411101}
   isLocked: 0
+--- !u!114 &1182411107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182411096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d124af7cd4794045bb9a4f49bf851fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flare: {fileID: 5569265033854784800, guid: 4fb8c18698ae8ab4db147f7a1e2e114a, type: 3}
+  flareQuantity: 1
+  flareOn: 0
 --- !u!1 &1202857459
 GameObject:
   m_ObjectHideFlags: 0
