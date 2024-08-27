@@ -102,6 +102,6 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: webgl
-          ITCH_GAME: scream-secrets-game
+          ITCH_GAME: test-build
           ITCH_USER: milodevs
           PACKAGE: itch-build
