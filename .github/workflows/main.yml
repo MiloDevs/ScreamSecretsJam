@@ -101,7 +101,7 @@ jobs:
         uses: manleydev/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
-          CHANNEL: webgl
+          CHANNEL: html5
           ITCH_GAME: test-build
           ITCH_USER: milodevs
           PACKAGE: itch-build
