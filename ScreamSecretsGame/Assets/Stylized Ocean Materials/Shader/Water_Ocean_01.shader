@@ -89,9 +89,9 @@ Shader "Water/Ocean_01" {
 ////// Emissive:
                 float4 node_8676 = _Time;
                 float node_1855_ang = _WaterOrientation;
-                float node_1855_spd = 1.0;
-                float node_1855_cos = cos(node_1855_spd*node_1855_ang);
-                float node_1855_sin = sin(node_1855_spd*node_1855_ang);
+                float node_1855_spd = 1;
+                float node_1855_cos = cos(node_1855_spd*node_1855_ang)*5;
+                float node_1855_sin = sin(node_1855_spd*node_1855_ang)*5;
                 float2 node_1855_piv = float2(0.5,0.5);
                 float2 node_1855 = (mul(i.uv0-node_1855_piv,float2x2( node_1855_cos, -node_1855_sin, node_1855_sin, node_1855_cos))+node_1855_piv);
                 float2 node_9870 = node_1855;
