@@ -5,6 +5,7 @@ using System;
 public class InspectableObject : MonoBehaviour, IInteractible
 {
     [SerializeField] Item item;
+    [SerializeField] string nameOfDialogueInteraction;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     private Transform originalParent;
@@ -25,8 +26,10 @@ public class InspectableObject : MonoBehaviour, IInteractible
 
     public void Interact()
     {
-
-        GameObject.FindObjectOfType<Dialogue>().StartDialogueOnInteraction(gameObject.name);
+        if (nameOfDialogueInteraction != null)
+        { 
+            GameObject.FindObjectOfType<Dialogue>().StartDialogueOnInteraction(nameOfDialogueInteraction);
+        }
         if (grabable)
         {
             itemManager.HandleItem(item);
