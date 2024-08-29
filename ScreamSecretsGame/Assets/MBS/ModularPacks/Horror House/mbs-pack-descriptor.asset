@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!49 &4900000
+TextAsset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mbs-pack-descriptor
+  m_Script: "{\n    \"guid\": \"7b988d70fa0d4fd5862c0616ade2bfdf\",\n    \"_name\":
+    \"Horror House\",\n    \"_wallGroups\": [\n        {\n            \"guid\": \"2f7b8493da0a4fc89f2f4850acac20df\",\n           
+    \"name\": \"New Wall Group\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"9061e1e6ee364f16add38b735336a50b\",\n                    \"name\":
+    \"New Wall Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 2038290184808993645,\n                           
+    \"guid\": \"0e0ed49461c65fa4b9fb7532b8f5aa3c\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"37713c4fec344e4693ec2f58e6cefb67\",\n           
+    \"name\": \"Wall Corner\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"e44da957ed394a19874eace263c3fb10\",\n                    \"name\":
+    \"New Wall Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 2255491326957981002,\n                           
+    \"guid\": \"8d41182f04bc7a043971e460ec711891\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    },\n                {\n                    \"guid\": \"4055931d1d964425b159eefe87148b81\",\n                   
+    \"name\": \"New Wall Module (1)\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 3372801094811805195,\n                           
+    \"guid\": \"c4278afa7d0bd5146a33466daba7d062\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"f5f09294daa8420d88625d61b826f009\",\n           
+    \"name\": \"New Wall Group (1)\",\n            \"_modules\": [\n               
+    {\n                    \"guid\": \"07960519e52d4248a7ca9dd45fcb002c\",\n                   
+    \"name\": \"New Wall Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 5636470846426908086,\n                           
+    \"guid\": \"11e7c28a1ea2c444d9132a444b4a4e26\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"063b76545c4b4b268edcc8c220f5c7c5\",\n           
+    \"name\": \"New Wall Group (2)\",\n            \"_modules\": [\n               
+    {\n                    \"guid\": \"45a69611eb8748699f2a9cc7afff4b37\",\n                   
+    \"name\": \"New Wall Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 6495760088005046423,\n                           
+    \"guid\": \"4ca40ff4ab6c77043815e8dfe0805b3f\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"ff29f196eb824cdc94f8dd9df1ba5d35\",\n           
+    \"name\": \"New Wall Group (3)\",\n            \"_modules\": [\n               
+    {\n                    \"guid\": \"7c07804b99694e2d9c47fac8901e6fe5\",\n                   
+    \"name\": \"New Wall Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 5636470846426908086,\n                           
+    \"guid\": \"11e7c28a1ea2c444d9132a444b4a4e26\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"a217bd0de4da48529547dcc41fc381f0\",\n           
+    \"name\": \"New Wall Group (4)\",\n            \"_modules\": [\n               
+    {\n                    \"guid\": \"ca43442d961240febcaa9f0b79f7c875\",\n                   
+    \"name\": \"New Wall Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 4342943268171908398,\n                           
+    \"guid\": \"d47368c245fd8e745951adc2390f1ed4\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        }\n    ],\n    \"_floorGroups\": [\n        {\n           
+    \"guid\": \"3bb2450075cc49098c5a314a240fa272\",\n            \"name\": \"New
+    Floor Group\",\n            \"_modules\": [\n                {\n                   
+    \"guid\": \"db7ed6a2ee4545dda412596c0e512318\",\n                    \"name\":
+    \"New Floor Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 4891425132845253773,\n                           
+    \"guid\": \"1f66b7f4284736a4d8bdffcdbf12d4e9\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        },\n        {\n            \"guid\": \"1651327fc5ec40468957af6727e1fad4\",\n           
+    \"name\": \"New Floor Group (1)\",\n            \"_modules\": [\n               
+    {\n                    \"guid\": \"0319cc2291124b9bbf128d932fca5dee\",\n                   
+    \"name\": \"New Floor Module\",\n                    \"prefabs\": [\n                       
+    {\n                            \"fileID\": 1811880700199683567,\n                           
+    \"guid\": \"d67d812feb109e34c8440df52bad590d\",\n                           
+    \"type\": 3\n                        },\n                        {\n                           
+    \"instanceID\": 0\n                        }\n                    ]\n               
+    }\n            ]\n        }\n    ],\n    \"_decoratorGroups\": [],\n    \"_decoratorCategories\":
+    [\n        {\n            \"guid\": \"dfb83af9346747cda6533dcd66095092\",\n           
+    \"_name\": \"All\"\n        }\n    ]\n}"
