@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2425235208988185996
 Transform:
   m_ObjectHideFlags: 0
@@ -224,6 +224,42 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1cb270720870e124eb49638f6ab7c702, type: 2}
+    - target: {fileID: 1312644221230550471, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_text
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312644221230550471, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_fontSize
+      value: 460.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312644221230550471, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_margin.y
+      value: 5.0967865
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312644221230550471, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 460.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312644221230550471, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698459848218812591, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 473.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698459848218812591, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 532.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698459848218812591, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1719.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698459848218812591, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1288.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3996913409147867576, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -244,6 +280,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 53933f7680888814082e61c55c46c788, type: 2}
+    - target: {fileID: 4407851200704938736, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 4472.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407851200704938736, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3510.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407851200704938736, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407851200704938736, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4822578469936101451, guid: ca8e5214a9c883a43bec0d540cdeabfd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2099

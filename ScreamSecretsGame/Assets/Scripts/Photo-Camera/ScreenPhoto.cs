@@ -14,7 +14,6 @@ public class ScreenPhoto : MonoBehaviour
     void Start()
     {
         photoCamera = GameObject.FindGameObjectWithTag("PhotoCamera").GetComponent<Camera>();
-        // Устанавливаем RenderTexture на камеру
         photoCamera.targetTexture = renderTexture;
         StartCoroutine(ScreenS()); 
         Photo = rw.gameObject; 

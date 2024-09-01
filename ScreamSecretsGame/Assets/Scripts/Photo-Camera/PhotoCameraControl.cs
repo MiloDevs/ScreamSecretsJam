@@ -7,7 +7,6 @@ public class PhotoCameraControl : MonoBehaviour
     public RawImage rwPref; 
     public Transform sliderContent;
 
-    //For flash effect
     public Light flashLight => gameObject.GetComponentInChildren<Light>();
     public float flashDuration = 0.1f;
     OpenGallery openGalleryScript => gameObject.GetComponentInParent<OpenGallery>();
